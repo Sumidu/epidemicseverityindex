@@ -74,8 +74,22 @@ our_data %>%
   cowplot::theme_minimal_hgrid() +
   labs(x = "Date", y= NULL, caption = paste("ESI S-Parameter = ",s_param, "Gray areas denote data errors."),
        title = "Epidemic Severity Index (ESI) in Europe over time")
-
 ggsave("esi_europe.pdf")
+
+
+our_data %>%
+  ggplot() +
+  aes(x = date, color = esi_roll, y = country) +
+  geom_point(size = 4, shape = 15, alpha = 0.5) +
+  #guides(color = FALSE) +
+  NULL +
+  scale_color_viridis_c("ESI (7d avg)", option = "D") +
+  scale_x_date(date_breaks = "month", labels = label_date_short()) +
+  scale_y_discrete(limits = rev) +
+  cowplot::theme_minimal_hgrid() +
+  labs(x = "Date", y= NULL, caption = paste("ESI S-Parameter = ",s_param, "Gray areas denote data errors."),
+       title = "Epidemic Severity Index (ESI) in Europe over time")
+ggsave("esi_europe_roll.pdf")
 
 
 # Line plots
