@@ -1,0 +1,13 @@
+name: EpidemicExplorer
+title: EpidemicExplorer
+username:
+account: andrecalerovaldez
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4073276
+bundleId: 4552993
+url: https://andrecalerovaldez.shinyapps.io/EpidemicExplorer/
+when: 1620084500.9766
+lastSyncTime: 1620084500.97661
+asMultiple: FALSE
+asStatic: FALSE
